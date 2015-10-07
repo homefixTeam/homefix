@@ -1,0 +1,126 @@
+a{
+	border: none;
+	background-image: none;
+}
+a:focus { 
+    outline: none; 
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+input{
+	-webkit-appearance: none;
+	outline: 0;
+}
+.fa-weixin{
+	color: @wechat-color;
+}
+
+/*头部*/
+.header{
+	padding: @px10 @px20;
+	border-bottom: 1px solid #ccc;
+	height: 1rem;
+	.header-logo{
+		float: left;
+		width: 2rem;
+		height: 1rem;
+		background: url('../images/logo.gif') no-repeat;
+		background-size: cover;
+	}
+	.header-city{
+		float: left;
+		line-height: 1rem;
+		font-size: @px28;
+		color: @black;
+		margin-left: 1.5rem;
+	}
+	.header-login{
+		float: right;
+		a{
+			line-height: 1rem;
+			font-size: @px24;
+			margin-right: @px10;
+			border: 1px solid @logo-color;
+			padding: 2px 10px;
+			border-radius: 4px;
+			color: @logo-color;
+		}
+	}
+	.header-user{
+		float: right;
+		>p{
+			line-height: 1rem;
+			font-size: @px24;
+			margin-right: @px10;
+			color: @logo-color;
+			span{
+				color: #333;
+			}
+		}
+	}
+}
+/*页脚*/
+.footer{
+	padding: 8px 0px;
+	background-color: #333;
+	color: #999;
+	font-size: @px24;
+	.footer-link{
+		text-align: center;
+		>a{
+			display: inline-block;
+			border-right: 1px solid #999;
+			width: (135/64)*1rem;
+			color: #999;
+			&:nth-last-child(1){
+				border-right: none;
+			}
+		}
+	}
+	.footer-tel{
+		width: 6.5rem;
+		margin: 6px auto;
+		>p{
+			color: #ddd;
+			float: left;
+			text-align: left;
+			font-size: 18px;
+			line-height: @px100;
+			margin-right: 10px;
+		}
+	}
+	.footer-icp{
+		text-align: center;
+		line-height: 1rem;
+	}
+}
+.qrcode{
+	width: @px150;
+	height: @px150;
+}
+
+/*导航条样式*/
+.nav-title{
+	height: @px70;
+	/*background-color: #F2F2F2;*/
+	/*border-bottom: 1px solid @border-color;*/
+	padding: 0 2%;
+	a{
+		display: block;
+		float: left;
+		line-height: @px70;
+		font-size: @px30;
+		text-align: center;
+		width: 33%;
+		color: #333;
+		&:nth-child(1){
+			width: 30%;
+		}
+		&.current{
+			color: @logo-color;
+			border-bottom: 2px solid @logo-color;
+			margin-top: -1px;
+		}
+	}
+}

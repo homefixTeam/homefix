@@ -1,0 +1,191 @@
+/*轮播*/
+.swiper-container{
+	.swiper-slide{
+		img{
+			width: 10rem;
+			height: (200/64)*1rem;
+		}
+	}
+}
+.gray-sec{
+	height: 5px;
+	background-color: #d9d9d9;
+	border: 1px solid #ccc;
+}
+/*城市mark*/
+.fa-map-marker{
+	color: @logo-color;
+}
+/*首页导航*/
+.nav-content{
+	>div{
+		width: 45%;
+		text-align: center;
+		height: 80px;
+		line-height: 80px;
+		>a{
+			padding: 14px 30px;
+			font-size: 20px;
+			font-weight: bold;
+			color: @logo-color;
+			box-shadow: 4px 4px 10px #999;
+			border-radius: 8px;
+		}
+		&:nth-child(1){
+			padding-left: 5%;
+			float: left;
+		}
+		&:nth-child(2){
+			padding-right: 5%;
+			float: right;
+		}
+	}
+}
+.nav-zx{
+
+}
+/*装修区域*/
+.section-title{
+	padding: 0 @px20;
+	/*border-top: (4/64)*1rem solid #f5c132;*/
+	height: 1rem;
+	line-height: 1rem;
+	border-bottom: 1px solid #ccc;
+	/*background-color: @title-bg;*/
+	>span{
+		float: left;
+		font-weight: bold;
+		color: @title-color;
+		font-size: @px28;
+	}
+	>a{
+		float: right;
+		color: #666;
+		font-size: @px24;
+	}
+	.faq-more{
+		float: right;
+		>a{
+			&:nth-child(1){
+				border-right: 1px solid #ccc;
+				padding-right: 10px; 
+			}
+			color: @logo-color;
+			/*padding: 2px 4px;*/
+			/* border: 1px solid @logo-color;
+			border-radius: 4px; */
+			font-size: @px24;
+			margin-right: @px10;
+			/*line-height: 1rem;*/
+		}
+	}
+}
+.sec-type{
+	margin-top: @px10;
+	margin-left: @px20;
+	li{
+		float: left;
+		width: (205/64)*1rem;
+		margin-bottom: @px10;
+		a{
+			display: block;
+			color: #333;
+			span{
+				display: block;
+				margin-left: (52/64)*1rem;
+				width: (100/64)*1rem;
+				height: (102/64)*1rem;
+			}
+			p{
+				margin-top: @px10;
+				text-align: center;
+				font-size: @px24;
+			}
+		}
+	}
+	&.zx-base{
+		li{
+			a{
+				span{
+					background: url('../images/zx/1.png') no-repeat center center;
+					background-size: cover;
+				}
+			}
+		}
+	}
+	&.zx-addvalue{
+		li{
+			a{
+				span{		
+					background: url('../images/zx/2.png') no-repeat center center;
+					background-size: cover;
+				}
+			}
+		}
+	}
+}
+
+.sec-base-btn{
+	/*background-color: #DAF5F3;*/
+	margin: 0 10px;
+	display: block;
+	/*width: 100%;*/
+	height: 1rem;
+	line-height: 1rem;
+	border-top: 1px solid #d9d9d9;
+	text-align: center;
+	color: #333;
+	font-size: @px26;
+	i{
+		display: inline-block;
+		background-size: cover;
+		position: relative;
+		top: @px10;
+		right: @px10;
+		width: @px50;
+		height: @px40;
+	}
+	.icon-kitchen{
+		background-image: url('../images/icon/icon-kitchen.png');
+	}
+}
+
+/*建材*/
+.jc-section{
+	padding-bottom: @px10;
+}
+.jc-type{
+	padding: 0 @px10 @px10 @px10;
+	>div{
+		height: 1rem;
+		line-height: 1rem;
+		text-align: center;
+		>span{
+			float: left;
+			width: (160/64)*1rem;
+			color: @black;
+			font-weight: bold;
+			font-size: @px24;
+		}
+		>a{
+			float: left;
+			width: (115/64)*1rem;
+			color: #333;
+			font-size: @px24;
+		}
+	}
+}
+/*问答*/
+.faq-content{
+	padding: 0 @px10;
+	border-bottom: 1px solid @border-color;
+	p{
+		padding-left: @px10;
+		/*height: 0.8rem;*/
+		line-height: 0.8rem;
+		font-size: @px24;
+		&:nth-child(1){
+			font-weight: bold;
+		}
+	}
+}
