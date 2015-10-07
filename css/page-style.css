@@ -659,3 +659,109 @@ input {
   font-weight: bold;
   color: #fff;
 }
+/*问答*/
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+.a_content .input-submit {
+  width: 80%;
+  text-align: center;
+  font-size: 0.5625rem;
+}
+.a_content .q_cont {
+  /*display: none;*/
+
+  padding: 10px;
+}
+.a_content .category {
+  height: 0.78125rem;
+  line-height: 0.78125rem;
+  font-size: 0.46875rem;
+  padding-left: 0.9375rem;
+  margin-bottom: 10px;
+  /*.svence{
+			vertical-align: middle;
+		}*/
+
+}
+.a_content .category a {
+  position: relative;
+  color: #545454;
+  padding: 4px;
+  padding-right: 50px;
+  border: 1px solid #d9d9d9;
+}
+.a_content .category i.fa-sort-desc {
+  font-size: 0.5625rem;
+  position: absolute;
+  right: 10px;
+  /*top:0;*/
+
+}
+.a_content .category ul {
+  position: absolute;
+  left: 0;
+  top: 23px;
+  background-color: #fff;
+  width: 100%;
+  border: 1px solid #d9d9d9;
+  border-top: none;
+  margin-left: -1px;
+  /*display: none;*/
+
+}
+.a_content .category li {
+  padding: 0 4px;
+}
+.a_content .input_textarea {
+  border: 1px solid #d9d9d9;
+  width: 93%;
+  height: 3.125rem;
+  line-height: 0.46875rem;
+  padding: 10px;
+  outline: none;
+}
+.a_content .problem h3 {
+  font-size: 0.46875rem;
+  color: #545454;
+  font-weight: bold;
+  border-bottom: 1px solid #d9d9d9;
+  height: 0.78125rem;
+  line-height: 0.78125rem;
+  padding-left: 10px;
+}
+.a_content .problem h3 i.fa-book {
+  font-size: 0.53125rem;
+  margin-right: 5px;
+}
+.a_content .problem ul {
+  padding: 10px;
+  /*background-color: @title-bg;*/
+
+}
+.a_content .problem li {
+  font-size: 0.15625rem;
+  line-height: 0.78125rem;
+  overflow: hidden;
+}
+.a_content .problem li a {
+  color: #545454;
+}
+.a_content .problem .p_l {
+  float: left;
+}
+.a_content .problem .p_c {
+  float: left;
+  width: 80%;
+}
+.a_content .problem i.fa-angle-right {
+  font-size: 0.78125rem;
+  color: #d9d9d9;
+  float: right;
+  /*width: 10%;*/
+
+  height: 0.78125rem;
+}

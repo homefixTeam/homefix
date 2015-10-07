@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>装修服务列表</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="js/common/zepto.min.js"></script>
+	<script src="js/common/flexible.js"></script>
+	<link rel="stylesheet" href="css/page-style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<div class="a_content">
+		<div class="a_question">
+			<div class="submit">
+				<a href="#" class="input-submit" id="input-ask">我要提问</a>
+			</div>
+			<div class="q_cont">
+				<div class="category">
+					<span>问题类别：</span>
+					<a href="#">
+						<span class="svence">服务1</span>
+						<i class="fa fa-sort-desc"></i>
+						<ul>
+							<li>服务1</li>
+							<li>服务2</li>
+							<li>服务3</li>
+							<li>服务4</li>
+						</ul>
+					</a>
+				</div>
+				<textarea class="input_textarea"></textarea>
+				<div class="submit">
+					<input type="submit" class="input-submit" value="提交问题">
+				</div>
+			</div>
+		</div>
+		<div class="problem">
+			<h3><i class="fa fa-book"></i>常见问题</h3>
+			<ul>
+				<li><a href="#"><span class="p_l">1、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">2、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">3、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">4、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">5、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">6、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">7、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">8、</span><span class="p_c">装修的时候，什么地方需要刷涂？</span><i class="fa fa-angle-right p_r"></i></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script src="js/page-common.js"></script>
+<script src="js/common/common.js"></script>
+<script>
+	$(function(){
+		var $inputAsk = $('#input-ask'),
+			$qcont = $('.q_cont'),
+			$svence = $qcont.find('.category a'),
+			$svenceSpan = $svence.find('span'),
+			$select = $qcont.find('.category ul'),
+			$selectLi = $select.find('li');
+		$inputAsk.on('touchend', function(){
+			$qcont.toggleClass('show');
+		})
+		var ask = Util.getUrlParam('ask');
+		if(ask == "1"){
+			$qcont.removeClass('hide').addClass('show');
+		}else{
+			$qcont.removeClass('show').addClass('hide');
+		}
+		$svence.on('touchend', function(){
+			$select.toggleClass('show');
+		})
+		$select.addClass('hide');
+		$selectLi.on('touchend', function(){
+			$svenceSpan.html($(this).html());
+			$select.removeClass('show').addClass('hide');
+
+			return false;
+		})
+	})
+</script>
+</html>
