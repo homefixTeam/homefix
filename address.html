@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>编辑收货地址</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="js/common/zepto.min.js"></script>
+	<script src="js/common/flexible.js"></script>
+	<link rel="stylesheet" href="css/page-style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<section class="gray-sec"></section>
+	<section class="address">
+		<div class="address-input">
+			<span>联系人：</span>
+			<input type="text" data-type="rgn-txtPhone" data-text="请输入联系人" placeholder="请输入联系人">
+			<span class="input-error">联系人输入错误</span>
+		</div>
+		<div class="address-input">
+			<span>手机号：</span>
+			<input type="text" data-type="rgn-txtPhone" data-text="请输入手机号" placeholder="请输入手机号">
+			<span class="input-error">手机号输入错误</span>
+		</div>
+		<div class="address-input cf">
+			<span>地址：</span>
+			<div class="mySelect-d">
+				<select name="province">
+					<option value="1">--北京市--</option>
+				</select>
+			</div>
+			<div class="mySelect-d">
+				<select name="city">
+					<option value="1">--北京市--</option>
+				</select>
+			</div>
+			<div class="mySelect-d">
+				<select name="area">
+					<option value="1">--海淀区--</option>
+					<option value="2">朝阳区</option>
+					<option value="3">东城区</option>
+					<option value="4">西城区</option>
+				</select>
+			</div>
+			<span class="input-error">地址选择错误</span>
+		</div>
+		<div class="address-input">
+			<span>详细地址：</span>
+			<input type="text" data-type="rgn-txtPhone" data-text="请填写详细地址" placeholder="请填写详细地址">
+			<span class="input-error">详细地址填写错误</span>
+		</div>
+	</section>
+	<div class="submit">
+		<input type="submit" class="input-submit" value="保存并使用">
+	</div>
+	
+</body>
+<script src="js/page-common.js"></script>
+</html>
