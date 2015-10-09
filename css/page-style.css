@@ -923,3 +923,18 @@ select {
   color: #47b1cb;
   text-decoration: underline;
 }
+/*热门城市*/
+.city-now {
+  padding: 5px 0;
+}
+.city-now p {
+  text-align: center;
+  font-size: 0.46875rem;
+}
+.city-hot h2 {
+  font-weight: normal;
+  padding: 0 5px;
+  background-color: #eaebec;
+  line-height: 0.46875rem;
+  font-size: 0.46875rem;
+}
