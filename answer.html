@@ -18,16 +18,24 @@
 			<div class="q_cont">
 				<div class="category">
 					<span>问题类别：</span>
-					<a href="#">
+
+					<select style="padding: 4px 4px; width: auto;">
+						<option value="1">--服务1--</option>
+						<option value="2">--服务2--</option>
+						<option value="3">--服务3--</option>
+						<option value="4">--服务4--</option>
+					</select>
+					<!-- <a href="#">
 						<span class="svence">服务1</span>
 						<i class="fa fa-sort-desc"></i>
+					
 						<ul>
 							<li>服务1</li>
 							<li>服务2</li>
 							<li>服务3</li>
 							<li>服务4</li>
 						</ul>
-					</a>
+					</a> -->
 				</div>
 				<textarea class="input_textarea"></textarea>
 				<div class="submit">
@@ -38,14 +46,14 @@
 		<div class="problem">
 			<h3><i class="fa fa-book"></i>常见问题</h3>
 			<ul>
-				<li><a href="#"><span class="p_l">1、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">2、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">3、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">4、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">5、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">6、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">1、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">2、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">3、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">4、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">5、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">6、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料？</span><i class="fa fa-angle-right"></i></a></li>
+				<li><a href="#"><span class="p_l">8、</span><span class="p_c">装修的时候，什么地方需要刷涂，需要刷几遍？</span><i class="fa fa-angle-right p_r"></i></a></li>
 				<li><a href="#"><span class="p_l">7、</span><span class="p_c">装修的时候，什么地方需要刷涂防水涂料，需要刷几遍？</span><i class="fa fa-angle-right"></i></a></li>
-				<li><a href="#"><span class="p_l">8、</span><span class="p_c">装修的时候，什么地方需要刷涂？</span><i class="fa fa-angle-right p_r"></i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -55,30 +63,36 @@
 <script>
 	$(function(){
 		var $inputAsk = $('#input-ask'),
-			$qcont = $('.q_cont'),
-			$svence = $qcont.find('.category a'),
-			$svenceSpan = $svence.find('span'),
-			$select = $qcont.find('.category ul'),
-			$selectLi = $select.find('li');
+			$qcont = $('.q_cont');
+			// $svence = $qcont.find('.category a'),
+			// $svenceSpan = $svence.find('span'),
+			// $select = $qcont.find('.category ul'),
+			// $selectLi = $select.find('li');
 		$inputAsk.on('touchend', function(){
-			$qcont.toggleClass('show');
+			console.log($qcont.css('display'))
+			if($qcont.css('display') == 'none'){
+				$qcont.show();
+			}else{
+				$qcont.hide();
+			}
+			return false;
 		})
 		var ask = Util.getUrlParam('ask');
 		if(ask == "1"){
-			$qcont.removeClass('hide').addClass('show');
+			$qcont.show();
 		}else{
-			$qcont.removeClass('show').addClass('hide');
+			$qcont.hide();
 		}
-		$svence.on('touchend', function(){
-			$select.toggleClass('show');
-		})
-		$select.addClass('hide');
-		$selectLi.on('touchend', function(){
-			$svenceSpan.html($(this).html());
-			$select.removeClass('show').addClass('hide');
+		// $svence.on('touchend', function(){
+		// 	$select.toggleClass('show');
+		// })
+		// $select.hide();
+		// $selectLi.on('touchend', function(){
+		// 	$svenceSpan.html($(this).html());
+		// 	$select.hide();
 
-			return false;
-		})
+		// 	return false;
+		// })
 	})
 </script>
 </html>
