@@ -30,10 +30,15 @@
 				</p>
 				<a class="order-right" href="./address.html"></a>
 			</div>
-			<div class="order-paytype">
+			<div class="order-paytype cf">
 				<p>
-					<i class="fa fa-weixin fa-2x"></i>
+					<!-- <i class="fa fa-weixin fa-2x"></i> -->
+					<i class="icon-check" style="margin-top: 4px;"></i>
 					<span>微信支付</span>
+				</p>
+				<p>
+					<i class="icon-check uncheck" style="margin-top: 4px;"></i>
+					<span>支付宝支付</span>
 				</p>
 			</div>
 			<div class="order-cartinfo">
@@ -93,4 +98,13 @@
 	</div>
 </body>
 <script src="js/page-common.js"></script>
+<script>
+	$(function(){
+		var $pay = $('.order-paytype>p');
+		$pay.on('touchend', function(){
+			// $(this).find('i').toggleClass('uncheck');
+			$pay.find('i').toggleClass('uncheck');
+		})
+	})
+</script>
 </html>

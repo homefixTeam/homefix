@@ -29,7 +29,7 @@
 		
 		float: left;
 		width: 34%;
-		.icon-check{
+		/* .icon-check{
 			float: left;
 			display: block;
 			width: 20px;
@@ -39,7 +39,7 @@
 			&.uncheck{
 				background-position: 0 0;
 			}
-		}
+		} */
 		p{
 			font-size: @px30;
 			padding: 4px;
@@ -80,6 +80,17 @@
 		font-size: @px36;
 		color: #c3c3c3;
 		width: 8%;
+	}
+}
+.icon-check{
+	float: left;
+	display: block;
+	width: 20px;
+	height: 20px;
+	background: url("../images/cart-icon.png") no-repeat -25px 0;
+	background-size: 50px 100px;
+	&.uncheck{
+		background-position: 0 0;
 	}
 }
 .cart-submit{

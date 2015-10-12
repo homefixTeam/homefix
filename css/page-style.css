@@ -237,7 +237,9 @@ select {
 .nav-title {
   height: 1.09375rem;
   /*background-color: #F2F2F2;*/
+
   /*border-bottom: 1px solid @border-color;*/
+
   padding: 0 2%;
 }
 .nav-title a {
@@ -323,10 +325,12 @@ select {
 .section-title {
   padding: 0 0.3125rem;
   /*border-top: (4/64)*1rem solid #f5c132;*/
+
   height: 1rem;
   line-height: 1rem;
   border-bottom: 1px solid #ccc;
   /*background-color: @title-bg;*/
+
 }
 .section-title > span {
   float: left;
@@ -345,11 +349,14 @@ select {
 .section-title .faq-more > a {
   color: #47b1cb;
   /*padding: 2px 4px;*/
+
   /* border: 1px solid @logo-color;
 			border-radius: 4px; */
+
   font-size: 0.375rem;
   margin-right: 0.15625rem;
   /*line-height: 1rem;*/
+
 }
 .section-title .faq-more > a:nth-child(1) {
   border-right: 1px solid #ccc;
@@ -389,9 +396,11 @@ select {
 }
 .sec-base-btn {
   /*background-color: #DAF5F3;*/
+
   margin: 0 10px;
   display: block;
   /*width: 100%;*/
+
   height: 1rem;
   line-height: 1rem;
   border-top: 1px solid #d9d9d9;
@@ -444,6 +453,7 @@ select {
 .faq-content p {
   padding-left: 0.15625rem;
   /*height: 0.8rem;*/
+
   line-height: 0.8rem;
   font-size: 0.375rem;
 }
@@ -477,6 +487,7 @@ select {
 .zx-nav .right-nav .zx-list-detail > a span {
   display: block;
   /*padding: 5px 10px;*/
+
 }
 /*注册*/
 .input-section {
@@ -592,6 +603,7 @@ select {
   padding: 6px 14px;
   color: #333;
   /*font-weight: normal;*/
+
 }
 .jc-nav .right-nav .jc-list-detail .jc-list-type > a {
   float: left;
@@ -609,10 +621,12 @@ select {
 .jc-nav .right-nav .jc-list-detail .jc-list-type > a span {
   display: block;
   /*padding: 5px 10px;*/
+
 }
 /*购物车*/
 .cart-list-detail {
   /*padding: 5px 0 5px 12px;*/
+
   padding: 5px 0;
   border-bottom: 1px solid #d9d9d9;
   display: -webkit-box;
@@ -639,17 +653,18 @@ select {
   justify-content: center;
   float: left;
   width: 34%;
-}
-.cart-list-detail .cart-detail-left .icon-check {
-  float: left;
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: url("../images/cart-icon.png") no-repeat -25px 0;
-  background-size: 50px 100px;
-}
-.cart-list-detail .cart-detail-left .icon-check.uncheck {
-  background-position: 0 0;
+  /* .icon-check{
+			float: left;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background: url("../images/cart-icon.png") no-repeat -25px 0;
+			background-size: 50px 100px;
+			&.uncheck{
+				background-position: 0 0;
+			}
+		} */
+
 }
 .cart-list-detail .cart-detail-left p {
   font-size: 0.46875rem;
@@ -659,6 +674,7 @@ select {
   float: left;
   width: 57%;
   /*padding-left: 10px;*/
+
   font-size: 0.375rem;
   color: #333;
 }
@@ -688,6 +704,17 @@ select {
   color: #c3c3c3;
   width: 8%;
 }
+.icon-check {
+  float: left;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url("../images/cart-icon.png") no-repeat -25px 0;
+  background-size: 50px 100px;
+}
+.icon-check.uncheck {
+  background-position: 0 0;
+}
 .cart-submit {
   text-align: right;
   margin: 24px;
@@ -715,6 +742,7 @@ select {
 }
 .a_content .q_cont {
   /*display: none;*/
+
   padding: 10px;
 }
 .a_content .category {
@@ -726,6 +754,7 @@ select {
   /*.svence{
 			vertical-align: middle;
 		}*/
+
 }
 .a_content .category a {
   position: relative;
@@ -739,6 +768,7 @@ select {
   position: absolute;
   right: 10px;
   /*top:0;*/
+
 }
 .a_content .category ul {
   position: absolute;
@@ -750,6 +780,7 @@ select {
   border-top: none;
   margin-left: -1px;
   /*display: none;*/
+
 }
 .a_content .category li {
   padding: 0 4px;
@@ -778,6 +809,7 @@ select {
 .a_content .problem ul {
   padding: 10px;
   /*background-color: @title-bg;*/
+
 }
 .a_content .problem li {
   line-height: 0.78125rem;
@@ -799,6 +831,7 @@ select {
   color: #d9d9d9;
   float: right;
   /*width: 10%;*/
+
   height: 0.78125rem;
 }
 /*订单结算*/
@@ -813,7 +846,7 @@ select {
 }
 .order-info > div > p span {
   vertical-align: top;
-  margin-left: 5px;
+  margin-left: 3px;
 }
 /*.order-cartinfo{ 
 	.cart-list-detail:nth-last-chlid(1){
@@ -836,12 +869,17 @@ select {
   height: 1.6em;
   background-size: 0.8em 1.6em;
 }
+.order-paytype > p {
+  float: left;
+  margin-right: 10px;
+}
 /*地址编辑*/
 .address {
   padding: 10px 2px;
 }
 .address .address-input {
   /*height: @px60;*/
+
   line-height: 0.9375rem;
   font-size: 0.4375rem;
   padding: 8px 8px;
@@ -861,6 +899,7 @@ select {
   float: none;
   clear: both;
   /*margin-left: 12px;*/
+
   line-height: 0.5rem;
   color: red;
   font-size: 0.375rem;
@@ -893,6 +932,7 @@ select {
 .reg-result .nav-title {
   border-top: 1px solid #d9d9d9;
   /*background-color: @title-bg;*/
+
   margin: 10px 0;
 }
 .reg-result .nav-title a {
@@ -913,6 +953,7 @@ select {
 }
 .city-hot h2 {
   /*font-weight: normal;*/
+
   padding: 0 5px;
   background-color: #eaebec;
   line-height: 0.9375rem;
