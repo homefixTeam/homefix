@@ -493,7 +493,7 @@ select {
 .input-section {
   margin: 10px 0;
 }
-.input-section .input-title {
+.input-title {
   background-color: #eaebec;
   height: 1.25rem;
   line-height: 1.25rem;
@@ -984,4 +984,66 @@ select {
   line-height: 1.25rem;
   color: #323232;
   border-right: 1px solid #d9d9d9;
+}
+/*订单详情*/
+.detail-service .cart-list-detail .cart-detail-left {
+  width: 24%;
+}
+.detail-service .cart-list-detail .cart-detail-right {
+  width: 52%;
+}
+.detail-service .cart-list-detail .cart-detail-right p {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.detail-service .cart-list-detail .cart-image {
+  width: 24%;
+  background: no-repeat url('../images/touxiang.jpg') top center;
+  background-size: 1.875rem 2.34375rem;
+}
+.order-money {
+  border-top: 1px solid #d9d9d9;
+  padding: 10px 10px 0px 10px;
+}
+.order-money p {
+  font-size: 0.4375rem;
+  /*line-height: @px36;*/
+
+  text-align: right;
+}
+.detail-options {
+  padding: 5px 10px;
+  border-bottom: 1px solid #bbb;
+}
+.detail-options > p {
+  /*padding-left: 10px;*/
+
+  line-height: 0.9375rem;
+  font-size: 0.4375rem;
+  font-size: #000;
+  border-bottom: 1px solid #d9d9d9;
+}
+.detail-options > p:nth-last-child(1) {
+  border-bottom: none;
+}
+/*五角星*/
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+  font-size: 0.46875rem;
+}
+.rating span.star {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+}
+.rating span.star.current:before {
+  content: "\f005";
+  color: #e3cf7a;
+}
+.rating span.star:before {
+  content: "\f006";
+  color: #777777;
 }
