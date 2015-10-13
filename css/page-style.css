@@ -1027,6 +1027,47 @@ select {
 .detail-options > p:nth-last-child(1) {
   border-bottom: none;
 }
+/*订单列表*/
+.order-list-sec {
+  margin-bottom: 10px;
+}
+.order-list {
+  padding: 5px 5px;
+  border-bottom: 1px solid #d9d9d9;
+}
+.order-list > div {
+  float: left;
+}
+.order-list > div > p {
+  line-height: 0.78125rem;
+  font-size: 0.40625rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.order-list .order-list-left {
+  width: 25%;
+  font-size: 0.46875rem;
+  line-height: 3.125rem;
+}
+.order-list .order-list-center {
+  width: 65%;
+}
+.order-list .order-list-right {
+  width: 10%;
+  position: relative;
+  height: 3.125rem;
+}
+.order-list .order-list-right .order-right {
+  position: absolute;
+  right: 1.2em;
+  top: 50%;
+  margin-top: -0.8em;
+  background: url('../images/right.png') no-repeat;
+  width: 0.8em;
+  height: 1.6em;
+  background-size: 0.8em 1.6em;
+}
 /*五角星*/
 .rating {
   unicode-bidi: bidi-override;
