@@ -1109,6 +1109,7 @@ select {
   padding: 0 0.3rem;
   font-size: 0.4375rem;
   line-height: 0.6875rem;
+  padding-bottom: 2rem;
 }
 .fw-cal .fw-cal-par {
   width: 100%;
@@ -1165,6 +1166,39 @@ select {
   top: 50%;
   margin-top: -0.4rem;
 }
+.fw-cal .fw-cal-par > ul li .fw-checked {
+  height: 1rem;
+  line-height: 1rem;
+  margin-left: 30%;
+  /*margin-bottom: 0rem;*/
+
+}
+.fw-cal .fw-cal-par > ul li .fw-checked span {
+  float: left;
+  margin-right: 0.5rem;
+  text-align: left;
+  width: 1rem;
+}
+.fw-cal .fw-cal-par > ul li .fw-checked i {
+  margin-top: 0.25rem;
+  margin-right: 0.2rem;
+}
+.fw-cal .fw-cal-par > ul li .fw-floor-checked {
+  margin-left: 15%;
+  height: 2rem;
+  line-height: 0.9rem;
+  margin-bottom: 0rem;
+}
+.fw-cal .fw-cal-par > ul li .fw-floor-checked span {
+  width: 2.3rem;
+}
+.fw-cal .fw-cal-par > ul li .fw-floor-checked i {
+  margin-top: 0.25rem;
+}
+.fw-cal .fw-cal-par > ul .fw-diy > p .fw-diy-left {
+  display: inline-block;
+  width: 2.2rem;
+}
 .fw-cal .fw-cal-par > ul input {
   height: 0.78125rem;
   border: 1px solid #999;
@@ -1211,6 +1245,9 @@ select {
   margin-top: -6px;
   padding: 0.1rem 0.4rem;
 }
+.fw-cal-hydro li span {
+  font-size: 0.46875rem;
+}
 .fw-cal-hydro li span:nth-child(1) {
   width: 40%;
 }
@@ -1223,6 +1260,9 @@ select {
 .fw-cal-hydro input.fw-input-multi {
   width: 24%;
   margin-right: 4px;
+}
+.fw-cal-hydro p {
+  margin-bottom: 0.2rem;
 }
 .fw-cal-kitchen li span:nth-child(1) {
   width: 36%;
@@ -1243,7 +1283,7 @@ select {
   padding: 5px 0;
   font-size: 0.34375rem;
   line-height: 0.5625rem;
-  text-align: left;
+  text-indent: 0.7rem;
   color: #f40;
 }
 .fw-addcart {

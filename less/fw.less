@@ -15,6 +15,7 @@
 	padding: 0 0.3rem;
 	font-size: @px28;
 	line-height: @px44;
+	padding-bottom: 2rem;
 	.fw-cal-par{
 		width: 100%;
 		border-top: 1px solid @border-color;
@@ -36,10 +37,11 @@
 		-ms-flex-pack: center;
 		-webkit-justify-content: center;
 		justify-content: center; */
-
+		
 		>ul{
 			width: 100%;
 			/*border-right: 1px solid @border-color;*/
+
 			li{
 				/*padding: 5px 5px 12px 5px;*/
 				border-bottom: 1px solid @border-color;
@@ -59,11 +61,46 @@
 					top:50%;
 					margin-top: -0.4rem;
 				}
-				
+				.fw-checked{
+					height: 1rem;
+					line-height: 1rem;
+					margin-left: 30%;
+					/*margin-bottom: 0rem;*/
+					span{
+						float: left;
+						margin-right: 0.5rem;
+						text-align: left;
+						width: 1rem;
+					}
+					i{
+						margin-top: 0.25rem;
+						margin-right: 0.2rem;
+					}
+				}
+				.fw-floor-checked{
+					margin-left: 15%;
+					height: 2rem;
+					line-height: 0.9rem;
+					margin-bottom: 0rem;
+					span{
+						width: 2.3rem;
+					}
+					i{
+						margin-top: 0.25rem;
+					}
+				}
 				/* &:nth-last-child(1){
 					border-bottom: 0;
 				} */
 				
+			}
+			.fw-diy{
+				>p{
+					.fw-diy-left{
+						display: inline-block;
+						width: 2.2rem;
+					}
+				}
 			}
 			input{
 				height: @px50;
@@ -117,6 +154,7 @@
 .fw-cal-hydro{
 	li{
 		span{
+			font-size: @px30;
 			&:nth-child(1){
 				width: 40%;
 			}
@@ -133,6 +171,9 @@
 			width: 24%;
 			margin-right: 4px;
 		}
+	}
+	p{
+		margin-bottom: 0.2rem;
 	}
 }
 .fw-cal-kitchen{
@@ -160,7 +201,7 @@
 	padding: 5px 0;
 	font-size: @px22;
 	line-height: @px36;
-	text-align: left;
+	text-indent: 0.7rem;
 	color: #f40;
 }
 
