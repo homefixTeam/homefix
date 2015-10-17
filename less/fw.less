@@ -2,16 +2,23 @@
 	/*text-indent: 2em;*/
 	font-size: @px26;
 	line-height: @px38;
-	padding: 5px 5px;
+	padding: 0.3rem;
 	color: #333;
+	>h3{
+		font-size: @px28;
+	}
+	>p{
+		text-indent: 0.8rem;
+	}
 }
 .fw-cal{
-	padding: 0 6px;
+	padding: 0 0.3rem;
 	font-size: @px28;
 	line-height: @px44;
 	.fw-cal-par{
+		width: 100%;
 		border-top: 1px solid @border-color;
-		border-bottom: 1px solid @border-color;
+		/*border-bottom: 1px solid @border-color;*/
 		/* display: -webkit-box; 
 		display: -moz-box;
 		display: -ms-flexbox;
@@ -31,41 +38,42 @@
 		justify-content: center; */
 
 		>ul{
-			padding: 0 5px;
 			width: 100%;
 			/*border-right: 1px solid @border-color;*/
 			li{
-				padding: 5px 5px 12px 5px;
+				/*padding: 5px 5px 12px 5px;*/
 				border-bottom: 1px solid @border-color;
-				>span{
-					float: left;
-					&:nth-child(1){
-						text-align: right;
-					}
-					&:nth-child(2){
-						p{
-							line-height: @px40;
-						}
-					}
+				padding: 0.4rem 0;				
+				text-align: center;
+				position: relative;
+				>p{
+					line-height: @px70;
+					font-size: @px28;
 				}
+				>i.fa-minus-square-o, i.fa-plus-square-o{
+					float: left;
+					width: 10%;
+					font-size: 1rem;
+					position: absolute;
+					right: 0;
+					top:50%;
+					margin-top: -0.4rem;
+				}
+				
 				/* &:nth-last-child(1){
 					border-bottom: 0;
 				} */
-				i.fa-minus-square-o, i.fa-plus-square-o{
-					float: left;
-					width: 10%;
-				}
+				
 			}
 			input{
-				border: none;
-				border-bottom: 1px solid #333;
+				height: @px50;
+				border: 1px solid #999;
 				border-radius: 0;
-				margin-right: 4px;
 				font-size: @px28;
-			}
-			&.fw-cal-left{
-				/*width: 82%;*/
-				float: left;
+				margin-right: 4px;
+				width: 15%;
+				padding:0 0.1rem;
+				text-align: center;
 			}
 
 		}
@@ -73,14 +81,36 @@
 			padding: 5px 0px 5px 6px;
 			float: left;
 			/*text-indent: 2em;*/
-			font-size: @px28;
+			font-size: @px26;
 			line-height: @px44;
+			color: #777;
 		}
 		div.fw-cal-right{
 			width: 12%;
 			float: left;
 			padding-top: @px60;
 			text-align: center;
+		}
+	}
+	.fw-tital{
+		height: 1rem;
+		line-height: 1rem;
+		margin-top: 0.4rem;
+		>span{
+			float: left;
+			&:nth-child(1){
+				font-size: @px28;
+			}
+			&:nth-child(2){
+				font-weight:bold;
+				font-size: @px30;
+			}
+		}
+		.fw-btn-fee{
+			float: right;
+			font-size: 0.5rem;
+			margin-top: -6px;
+			padding: 0.1rem 0.4rem;
 		}
 	}
 }
@@ -122,16 +152,16 @@
 }
 .fw-btn-fee{
 	padding: 4px 5px;
-	/*border: 1px solid @logo-color;*/
 	border-radius: 4px;
 	background-color: @logo-color;
 	color: #fff;
 }
 .fw-remark{
-	padding: 5px 0 5px 8px;
-	/*text-indent: 2em;*/
-	font-size: @px24;
-	line-height: @px42;
+	padding: 5px 0;
+	font-size: @px22;
+	line-height: @px36;
+	text-align: left;
+	color: #f40;
 }
 
 .fw-addcart{
@@ -140,7 +170,6 @@
 	bottom: 0;
 	z-index: 10;
 	text-align: center;
-	/*margin: 24px;*/
 	height: 50px;
 	width: 100%;
 	a.fw-cart-ico{
