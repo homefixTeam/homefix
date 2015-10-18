@@ -1334,3 +1334,22 @@ select {
   font-weight: bold;
   color: #fff;
 }
+.fw-date {
+  width: 100%;
+  padding: 10px 0;
+  border-bottom: 1px solid #d9d9d9;
+  text-align: center;
+  /*height: 40px;*/
+
+}
+.fw-date input {
+  height: 0.78125rem;
+  line-height: 0.78125rem;
+  border: 1px solid #999;
+  border-radius: 0;
+  font-size: 0.4375rem;
+  margin-right: 4px;
+  width: 36%;
+  padding: 0 0.1rem;
+  text-align: center;
+}
