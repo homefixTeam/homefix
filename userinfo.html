@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="js/common/zepto.min.js"></script>
+	<script src="js/common/flexible.js"></script>
+	<link rel="stylesheet" href="css/page-style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<section class="gray-sec"></section>
+	<p class="guide-title">
+		<i class="fa fa-angle-left"></i>
+		<span>我的信息</span>
+	</p>
+	<section class="my-info user-info">
+		<div class="my-headimg">
+			<img src="../images/people.png" alt="头像" width="100" height="100">
+			<form action="www.baidu.com" method="post" style="display:none;">
+				<input type="file" id="my-file-img">
+			</form>
+		</div>
+		<ul>
+			<li class="cf">
+				<span>用户名：</span>
+				<span><input type="text" data-type="rgn-txtName"></span>
+			</li>
+			<li class="cf">
+				<span>手机号：</span>
+				<span><input type="text" data-type="rgn-txtPhone"></span>
+			</li>
+			<li class="cf">
+				<span>微信号：</span>
+				<span>
+					<i class="fa fa-weixin"></i>
+					<label>liuxuewen888</label>
+				</span>
+			</li>
+			<li class="cf">
+				<span>省市：</span>
+				<span>
+					<select name="province">
+						<option value="1">--北京市--</option>
+					</select>
+					<select name="city">
+						<option value="1">--北京市--</option>
+					</select>
+					<select name="area">
+						<option value="1">--海淀区--</option>
+						<option value="2">朝阳区</option>
+						<option value="3">东城区</option>
+						<option value="4">西城区</option>
+					</select>
+				</span>
+			</li>
+			<li>
+				<span>详细地址：</span>
+				<span>
+					<textarea name="my-myself" cols="24" rows="6"></textarea>
+				</span>
+			</li>
+			<li class="cf">
+				<span>年龄：</span>
+				<div class="my-check">
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>90后</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>80后</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>70后</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>60后</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>50后</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>40后</span>
+					</p>
+				</div>
+			</li>
+		</ul>
+		
+	</section>
+	<p class="info-error">
+		
+	</p>
+	<div class="submit">
+		<input type="submit" class="input-submit" value="提交">
+	</div>
+	
+	
+</body>
+<script src="js/page-common.js"></script>
+<script src="js/userinfo.js"></script>
+</html>

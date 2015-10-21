@@ -1,0 +1,80 @@
+.my-info{
+	padding: 15px 5px 5px 5px;
+	.my-headimg{
+		text-align: center;
+		img{
+			border: 1px solid @border-color;
+			border-radius: 50%;
+		}
+		margin-bottom: 5px;
+	}
+
+	ul{
+		text-align: right;
+		line-height: @px80;
+		font-size: @px28;
+		padding-left: 20px;
+		li{
+			/*padding-right: 50px;*/
+			>span{
+				float: left;
+			}
+			>span:nth-child(1){
+				text-align: left;
+				width: 30%;
+			}
+			>span:nth-child(2){
+				text-align: left;
+				width: 70%;
+			}
+			>div.my-check{
+				width: 70%;
+				text-align: left;
+				float: left;
+				p{
+					width: 33.3%;
+					float: left;
+				}
+			}
+			input[type=text]{
+				height: @px50;
+				border: 1px solid #999;
+				border-radius: 0;
+				font-size: @px28;
+				margin-right: 4px;
+				width: 72%;
+				padding:0 0.1rem;
+				text-align: left;
+			}
+			input.btn-upload{
+				font-size: @px28;
+				background-color: @logo-color;
+				border-radius: 6px;
+				padding: 5px 25px;
+				border: none;
+				color: #fff;
+			}
+		}
+		
+	}
+}
+
+.info-error{
+	margin-left: 12px; 
+	color: red;
+	font-size: @px24;
+	display: none;
+}
+
+.user-info{
+	>ul{
+		>li{
+			>span:nth-child(1){
+				width: 25%;
+			}
+			>span:nth-child(2){
+				width: 75%;
+			}
+		}
+	}
+}

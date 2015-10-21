@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的信息</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="js/common/zepto.min.js"></script>
+	<script src="js/common/flexible.js"></script>
+	<link rel="stylesheet" href="css/page-style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+	<section class="gray-sec"></section>
+	<p class="guide-title">
+		<i class="fa fa-angle-left"></i>
+		<span>我的信息</span>
+	</p>
+	<section class="my-info">
+		<div class="my-headimg">
+			<img src="../images/people.png" alt="头像" width="100" height="100">
+			<form action="www.baidu.com" method="post" style="display:none;">
+				<input type="file" id="my-file-img">
+			</form>
+		</div>
+		<ul>
+			<li class="cf">
+				<span>姓名：</span>
+				<span><input type="text" data-type="rgn-txtName"></span>
+			</li>
+			<li class="cf">
+				<span>手机号：</span>
+				<span><input type="text" data-type="rgn-txtPhone"></span>
+			</li>
+			<li class="cf">
+				<span>身份证号：</span>
+				<span><input type="text" data-type="rgn-txtSFZ"></span>
+			</li>
+			<li class="cf">
+				<span>身份证照片：</span>
+				<span>
+					<input type="button" value="上传" class="btn-upload">
+					<form action="www.baidu.com" method="post" style="display: none;">
+						<input type="file" id="my-file-sfz">
+					</form>
+				</span>
+			</li>
+			<li class="cf">
+				<span>籍贯：</span>
+				<span>
+					<select name="city">
+						<option value="1">--北京市--</option>
+					</select>
+				
+					<select name="area">
+						<option value="1">--海淀区--</option>
+						<option value="2">朝阳区</option>
+						<option value="3">东城区</option>
+						<option value="4">西城区</option>
+					</select>
+				</span>
+			</li>
+			<li class="cf">
+				<span>工龄：</span>
+				<span>
+					<select name="gonglin">
+						<option value="1">--工龄--</option>
+					</select>
+				</span>
+			</li>
+			<li class="cf">
+				<span>技能：</span>
+				<div class="my-check">
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>瓦工</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>电工</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>水电工</span>
+					</p>
+					<p>
+						<i class="icon-check uncheck" style="margin-top: 10px;"></i>
+						<span>木工</span>
+					</p>
+				</div>
+			</li>
+			<li>
+				<span>自我介绍：</span>
+				<span>
+					<textarea name="worker-myself" cols="24" rows="6"></textarea>
+				</span>
+			</li>
+		</ul>
+	</section>
+	<p class="info-error">
+		
+	</p>
+	<div class="submit">
+		<input type="submit" class="input-submit" value="提交">
+	</div>
+	
+</body>
+<script src="js/page-common.js"></script>
+<script src="js/workerinfo.js"></script>
+</html>
