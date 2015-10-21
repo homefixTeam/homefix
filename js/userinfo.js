@@ -10,12 +10,10 @@ $(function(){
 	})
 
 	//选择年龄（单选）
-	var $arrCheck = $(".my-check .icon-check");
+	var $arrCheck = $(".my-check p");
 	$arrCheck.on('touchend', function(){
-		$arrCheck.addClass('uncheck');
-		$(this).removeClass('uncheck');
-	}).next().on('touchend', function(){
-		$(this).prev().trigger('touchend');
+		$arrCheck.find('.icon-check').addClass('uncheck');
+		$(this).find('.icon-check').removeClass('uncheck');
 	});
 
 	//提交

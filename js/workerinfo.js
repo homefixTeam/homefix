@@ -20,11 +20,9 @@ $(function(){
 	})
 
 	//选择技能（多选）
-	$(".my-check .icon-check").on('touchend', function(){
-		$(this).toggleClass('uncheck');
-	}).next().on('touchend', function(){
-		$(this).prev().trigger('touchend');
-	})
+	$(".my-check p").on('touchend', function(){
+		$(this).find('.icon-check').toggleClass('uncheck');
+	});
 
 	//提交
 	$(".submit .input-submit").on('touchend', function(){
