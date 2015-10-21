@@ -1,0 +1,51 @@
+.my-index{
+	padding: 15px 5px 5px 5px;
+	text-align: center;
+	>img{
+		border-radius: 50%;
+	}
+	>p{
+		padding: 5px 0;
+		&.my-index-name{
+			font-size: @px28;
+			padding: 5px 0 0 0;
+		}
+	}
+
+	.my-index-detail{
+		padding: 15px 5px 5px 5px;
+		border-top: 1px solid @border-color;
+		>a{
+			display: block;
+			float: left;
+			width: 45%;
+			text-align: center;
+			p{
+				font-size: @px24;
+				color: #6a6a6a;
+				line-height: @px50;
+			}
+			&:nth-child(1){
+				padding-left: 5%;
+			}
+			&:nth-last-child(1){
+				padding-right: 5%;
+			}
+		}
+	}
+}
+
+/*个人中心*/
+.user-index{
+	>p{
+		&.my-index-name{
+			padding-bottom: 10px;
+		}
+	}
+
+	.my-index-detail{
+		>a{
+			width: 30%;
+		}
+	}
+}
