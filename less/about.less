@@ -1,0 +1,67 @@
+.about{
+	background-color: #F7F3F3;
+	padding: .7rem 0 0.5rem 0;
+	.about-blank{
+		height: @px30;
+		background-color: #fff;
+	}
+	.about-contain{
+		background-color: #F7F3F3;
+		.about-logo{
+			height: @px150; 
+			background: #fff url("../images/logo.gif") no-repeat 0 0;
+			background-position: center top;
+			background-size: contain;
+		}
+		.about-company{
+			background-color: #fff;
+			padding: @px30 @px30 @px10 @px30;
+			line-height: @px36;
+			font-size: @px28;
+			text-indent: 2em;
+		}
+		.about-special{
+			line-height: @px36;
+			font-size: @px28;
+			.about-mission{
+				padding: @px10 @px30 @px10 @px30;
+				background-color: #fff;
+				margin: @px28 0 @px18 0;
+
+				.about-mission-title{
+					margin: @px20 0 @px40 0;
+					span{
+						position: relative;
+						color: #fff;
+						padding: 0 @px30 0 @px20;
+						background-color: @logo-color;
+						&:after{
+							border-width: .3rem .25rem .3rem .2rem;
+							border-style: dashed solid dashed dashed;
+							border-color: transparent #fff transparent transparent;
+							content: "";
+							position: absolute;
+							top: 0;
+							right: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.contact{
+	padding: @px20 @px20 @px40 @px20;
+	.contact-title{
+		font-size: @px24;
+		line-height: @px36;
+		font-weight: bold;
+		margin: @px30 0;
+	}
+	.contact-content{
+		padding-bottom: @px20;
+		font-size: @px24;
+		line-height: @px36;
+	}
+}

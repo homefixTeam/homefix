@@ -1471,3 +1471,84 @@ select {
 .user-index .my-index-detail > a {
   width: 30%;
 }
+/*文章*/
+.article {
+  padding: 5px 5px;
+}
+.article .article-title {
+  font-size: 0.5625rem;
+  line-height: 1.09375rem;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.article .article-contain p {
+  text-indent: 2em;
+  font-size: 0.4375rem;
+  line-height: 0.78125rem;
+}
+/*关于我们*/
+.about {
+  background-color: #F7F3F3;
+  padding: .7rem 0 0.5rem 0;
+}
+.about .about-blank {
+  height: 0.46875rem;
+  background-color: #fff;
+}
+.about .about-contain {
+  background-color: #F7F3F3;
+}
+.about .about-contain .about-logo {
+  height: 2.34375rem;
+  background: #ffffff url("../images/logo.gif") no-repeat 0 0;
+  background-position: center top;
+  background-size: contain;
+}
+.about .about-contain .about-company {
+  background-color: #fff;
+  padding: 0.46875rem 0.46875rem 0.15625rem 0.46875rem;
+  line-height: 0.5625rem;
+  font-size: 0.4375rem;
+  text-indent: 2em;
+}
+.about .about-contain .about-special {
+  line-height: 0.5625rem;
+  font-size: 0.4375rem;
+}
+.about .about-contain .about-special .about-mission {
+  padding: 0.15625rem 0.46875rem 0.15625rem 0.46875rem;
+  background-color: #fff;
+  margin: 0.4375rem 0 0.28125rem 0;
+}
+.about .about-contain .about-special .about-mission .about-mission-title {
+  margin: 0.3125rem 0 0.625rem 0;
+}
+.about .about-contain .about-special .about-mission .about-mission-title span {
+  position: relative;
+  color: #fff;
+  padding: 0 0.46875rem 0 0.3125rem;
+  background-color: #47b1cb;
+}
+.about .about-contain .about-special .about-mission .about-mission-title span:after {
+  border-width: .3rem .25rem .3rem .2rem;
+  border-style: dashed solid dashed dashed;
+  border-color: transparent #fff transparent transparent;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.contact {
+  padding: 0.3125rem 0.3125rem 0.625rem 0.3125rem;
+}
+.contact .contact-title {
+  font-size: 0.375rem;
+  line-height: 0.5625rem;
+  font-weight: bold;
+  margin: 0.46875rem 0;
+}
+.contact .contact-content {
+  padding-bottom: 0.3125rem;
+  font-size: 0.375rem;
+  line-height: 0.5625rem;
+}
