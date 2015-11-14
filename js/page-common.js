@@ -16,5 +16,10 @@ $.get('footer.html', function(data) {
 });
 //向前跳转页面
 $('.fa-angle-left').on('touchend', function(){
-	window.location.href = document.referrer;
+	if (history.length > 1) {
+		history.back(-1);
+	} else {
+		window.location.href = "http://www.5jia168.com";
+	}
+	// window.location.href = document.referrer;
 })
