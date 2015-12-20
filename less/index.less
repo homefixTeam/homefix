@@ -157,8 +157,72 @@
 	}
 }
 
+/*建材品牌*/
+.jc-brand{
+	.brand-title{
+		.clearfix();
+		border-top: 1px solid #f4f4f4;
+		border-bottom: 1px solid #ccc;
+		padding: @px15 @px20 @px15 @px8;
+		span{
+			float: left;
+			line-height: @px34;
+			font-size: @px28;
+			color: #333;
+			&:nth-child(1){
+				width: @px34;
+				height: @px34;
+				margin: 0 @px12;
+				background-size: cover;
+			}
+			&.brand-1{
+				background-image: url('../images/icon/icon_index_1.png');
+			}
+			&.brand-2{
+				background-image: url('../images/icon/icon_index_2.png');
+			}
+			&.brand-3{
+				background-image: url('../images/icon/icon_index_3.png');
+			}
+			&.brand-4{
+				background-image: url('../images/icon/icon_index_4.png');
+			}
+		}
+		a{
+			float: right;
+			font-size: @px28;
+			color: #333;
+		}
+	}
+	.brand-detail{
+		padding: 0 @px20;
+		color: #999;
+		font-size: @px24;
+		ul{
+			.clearfix();
+			border-bottom: 1px solid #f4f4f4;
+			li{
+				float: left;
+				width: 20%;
+				padding-left: 5%;
+				&:nth-child(1){
+					width:25%;
+					padding-left: 0;
+				}
+				line-height: @px72;
+				height: @px72;
+				a{
+					color: #333;
+					font-size: @px24;
+				}
+			}
+		}
+	}
+	
+}
+
 /*建材*/
-.jc-section{
+/* .jc-section{
 	padding-bottom: @px10;
 }
 .jc-type{
@@ -181,18 +245,33 @@
 			font-size: @px24;
 		}
 	}
-}
+} */
 /*问答*/
 .faq-content{
-	padding: 0 @px10;
+	padding: @px20 @px8;
 	border-bottom: 1px solid @border-color;
 	p{
-		padding-left: @px10;
-		/*height: 0.8rem;*/
-		line-height: 0.8rem;
+		.clearfix();
 		font-size: @px24;
-		&:nth-child(1){
-			font-weight: bold;
+		span{
+			width: (560/64)*1rem;
+			line-height: @px34;
+			&:nth-child(1){
+				width: @px34;
+				height: @px34;
+				margin: 0 @px12;
+				border-radius: 4px;
+				color: #fff;
+				text-align: center;
+			}
+			&.faq-content-ask{
+				background-color: #f06f22;
+				margin-bottom: @px18;
+			}
+			&.faq-content-answer{
+				background-color: #47b0cb;
+			}
+			float: left;
 		}
 	}
 }
