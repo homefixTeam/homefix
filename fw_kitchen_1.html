@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>厨房翻新服务</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script src="js/common/zepto.min.js"></script>
+	<script src="js/common/flexible.js"></script>
+	<link rel="stylesheet" href="css/page-style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body header="0" footer="0">
+	<section class="gray-sec"></section>
+	<section class="fw">
+		<p class="guide-title">
+			<i class="fa fa-angle-left"></i>
+			<span>全套厨房翻新服务</span>
+		</p>
+		<div class="fw-con">
+			<p>内容简介：厨房翻新服务厨房翻新服务厨房翻新服务厨房翻新服务厨房翻新服务新服务厨房翻新服务厨房翻新服务厨房翻新服务</p>
+		</div>
+		<div class="fw-cal">
+			<div class="fw-cal-par cf">
+				<ul>
+					<li>
+						<input type="tel" placeholder="请输入长度" data-vali="txtLength" data-max="220">
+						<span class="input-tip">请输入格式</span>
+						<i>m²</i>
+					</li>
+					<li>
+						<input class="input-focus" type="tel" placeholder="请输入高度" data-vali="txtHeight" data-max="20">
+						<span class="input-tip">请输入格式</span>
+						<i>m²</i>
+					</li>
+					<li>
+						<input type="tel" placeholder="请输入宽度" data-vali="txtWidth" data-max="10">
+						<span class="input-tip">请输入格式</span>
+						<i>m²</i>
+					</li>
+					<li>
+						<input type="date" value="2015-10-18">
+						<span class="input-tip">时间格式错误</span>
+						<i class="icon-calender"></i>
+					</li>
+					<li class="input-update">
+						<span class="del enable">删减装修</span>
+						<span class="add">添加装修</span>
+					</li>
+				</ul>
+				<p class="fy-tital">人工费用合计：<span>￥1,234.00</span></p>
+				<div class="fw-btn-fee cf">
+					<a href="javascript:;">计算费用</a>
+					<span class="input-tip" style="display: block">费用不得低于1000元</span>
+				</div>
+				<p class="fw-remark">
+					墙面翻新(涂料)墙面翻新(涂料)墙面翻新(涂料)墙面翻新(涂料)墙面翻新(涂料)墙面翻新(涂料)
+				</p>
+			</div>
+		</div>
+		<div class="fw-addcart cf">
+			<a href="javascript:;" class="fw-cart-ico">
+				<em class="btm-act-icn"></em>
+				<span>购物车</span>
+			</a>
+			<a href="javascript:;" class="fw-addcart-in">加入购物车</a>
+		</div>
+	</section>
+</body>
+<script src="js/page-common.js"></script>
+<script src="js/fw.js"></script>
+<script>
+	var vali_Obj = {
+		"txtLength":{
+			n: "请输入长度",
+			t: "长度不超过{0}字",
+			g: "请输入正确的长度格式"
+		},
+		"txtHeight":{
+			n: "请输入高度",
+			t: "高度不能超过{0}",
+			g: "请输入正确的高度格式"
+		},
+		"txtWidth":{
+			n: "请输入宽度",
+			t: "宽度不能超过{0}",
+			g: "请输入正确的宽度格式"
+		}
+	};
+	$(".fw-cal-par li").find('input').on("blur",function(){
+
+		$(this).closest('li').removeClass('input-error');
+
+		var dataVali = $(this).attr("data-vali");
+		var dataMax = $(this).attr("data-max");
+		var reg = /\d+/g;
+		var thisVal = $(this).val();
+
+		if(thisVal==""){
+			setTip.call(this, 'n');
+		}else if(!reg.test(thisVal)){
+			setTip.call(this, 'g');
+		}else if(parseInt(thisVal) > parseInt(dataMax)){
+			setTip.call(this, 't', dataMax);
+		}
+
+		function setTip(type, replaceVal){
+			var _errorMsg = vali_Obj[dataVali][type];
+			if(replaceVal){
+				_errorMsg = _errorMsg.replace(/\{0\}/g, replaceVal);
+			}
+			$(this).closest('li').addClass('input-error');
+			$(this).closest("li").find('.input-tip').html(_errorMsg);
+		}
+		
+	})
+</script>
+</html>
