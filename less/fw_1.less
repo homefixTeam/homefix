@@ -79,6 +79,28 @@
 						}
 					}
 				}
+				.add-downs{
+				    position: relative;
+					padding:0 @px60 0 @px20;
+				    width: (510/64)*1rem;
+				    border:1px solid @input-border;
+				    select{
+						border: 0;
+						width: (570/64)*1rem;
+						height: @px70;
+						font-size: @px30;
+					}
+				}
+				.add-downs:after{
+				    position: absolute;
+				    content: "";
+				    display: block;
+				    border-top: @px14 solid #666;
+				    border-left: @px14 solid transparent;
+				    border-right: @px14 solid transparent;
+				    top: @px30;
+				    right: @px30;
+				}
 			}
 
 		}
