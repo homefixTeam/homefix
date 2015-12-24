@@ -49,7 +49,9 @@ $(function(){
 		}
 
 		var $ul = $this.closest('ul');
-		var $_new = $ul.after('<ul id="1">' + $ul.html() + '</ul>');
+		var $_new = $('<ul>' + $ul.html() + '</ul>');
+		$ul.after($_new);
+		$_new.find('li').removeClass('input-error').end().find('input').val('');
 
 		setEnableStyle();
 	});
