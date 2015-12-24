@@ -1,45 +1,36 @@
 $(function(){
 
 	var vali_Obj = {
-		"txtLength":{
-			n: "请输入长度",
-			t: "长度不超过{0}字",
-			g: "请输入正确的长度格式"
-		},
-		"txtHeight":{
-			n: "请输入高度",
-			t: "高度不能超过{0}",
-			g: "请输入正确的高度格式"
-		},
-		"txtWidth":{
-			n: "请输入宽度",
-			t: "宽度不能超过{0}",
-			g: "请输入正确的宽度格式"
-		}
+		'n': "请输入{name}",
+		't': "{name}不超过{max}字",
+		'g': "请输入正确的{name}格式"
 	};
 	
 	$(".fw-cal-par li").find('input').on("blur",function(){
 
 		$(this).closest('li').removeClass('input-error');
 
-		var dataVali = $(this).attr("data-vali");
 		var dataMax = $(this).attr("data-max");
+		var dataName = $(this).attr("data-name");
 		var reg = /\d+/g;
 		var thisVal = $(this).val();
+		var _args = [];
 
-		if(thisVal==""){
-			setTip.call(this, 'n');
+		if(thisVal == ""){
+			_args = ['n'];
 		}else if(!reg.test(thisVal)){
-			setTip.call(this, 'g');
+			_args = ['g'];
 		}else if(parseInt(thisVal) > parseInt(dataMax)){
-			setTip.call(this, 't', dataMax);
+			_args = ['t', dataMax];
 		}
+		_args.length > 0 && setTip.apply(this, _args);
 
 		function setTip(type, replaceVal){
-			var _errorMsg = vali_Obj[dataVali][type];
-			if(replaceVal){
-				_errorMsg = _errorMsg.replace(/\{0\}/g, replaceVal);
+			var _errorMsg = vali_Obj[type];
+			if(replaceVal){				
+				_errorMsg = _errorMsg.replace(/\{max\}/g, replaceVal);
 			}
+			_errorMsg = _errorMsg.replace(/\{name\}/g, dataName);
 			$(this).closest('li').addClass('input-error');
 			$(this).closest("li").find('.input-tip').html(_errorMsg);
 		}
