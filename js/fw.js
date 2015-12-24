@@ -37,31 +37,51 @@ $(function(){
 		
 	});
 
+	
 	//add
-	$('.fw-cal-par').on('touchend', '.fa-plus-square-o', function(){
-		var $this = $(this),
-			$parLi = $this.closest('li');
-
-		var liHtml = '<li class="cf">' + $parLi.html().replace('fa-plus', 'fa-minus') + '</li>';
-		$parLi.after(liHtml);
-
-	}).on('touchend', '.fa-minus-square-o', function(){
-		var $this = $(this),
-			$parLi = $this.closest('li');
-
-		$parLi.remove();
-
-	}).on('touchend', '.icon-check', function(){
-		//选择框
+	var $parentBox = $(".fw-cal-par"),
+		maxUl = $parentBox.attr('data-max') || 5,
+		minUl = 1;
+	$parentBox.on('touchend', '.input-update .add', function(){
 		var $this = $(this);
-		$checkPar = $this.closest('.fw-checked');
-		$checkPar.find('.icon-check').addClass('uncheck');
+		if($this.hasClass('enable')){
+			return;
+		}
 
-		$this.removeClass('uncheck');
-	}).on('touchend', '.fw-checked span', function(){
+		var $ul = $this.closest('ul');
+		var $_new = $ul.after('<ul id="1">' + $ul.html() + '</ul>');
 
-		$(this).prev().trigger('touchend');
+		setEnableStyle();
+	});
+	//del
+	$parentBox.on('touchend', '.input-update .del', function(){
+		var $this = $(this);
+		if($this.hasClass('enable')){
+			return;
+		}
 
-	})
+		var $ul = $this.closest('ul');
+		$ul.remove();
+
+		setEnableStyle();
+	});
+
+	function setEnableStyle(){
+		var $_ul = $parentBox.find('ul');
+		var $_add = $_ul.find('.input-update .add');
+		var $_del = $_ul.find('.input-update .del');
+		var _num = $_ul.length;
+		if(_num >= maxUl){
+			$_add.addClass('enable');
+		}else{
+			$_add.removeClass('enable');
+		}
+		if(_num <= minUl){
+			$_del.addClass('enable');
+		}else{
+			$_del.removeClass('enable');
+		}
+	}
+
 
 })
