@@ -51,7 +51,8 @@ $(function(){
 		var $ul = $this.closest('ul');
 		var $_new = $('<ul>' + $ul.html() + '</ul>');
 		$ul.after($_new);
-		$_new.find('li').removeClass('input-error').end().find('input').val('');
+		$_new.find('li').removeClass('input-error');
+        $_new.find('input').val('');
 
 		setEnableStyle();
 	});
