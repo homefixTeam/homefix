@@ -6,7 +6,7 @@ $(function(){
 		'g': "请输入正确的{name}格式"
 	};
 	
-	$(".fw-cal-par li").find('input').on("blur",function(){
+	$(".fw-cal-par").on("blur", "li input", function(){
 
 		$(this).closest('li').removeClass('input-error');
 
@@ -49,7 +49,7 @@ $(function(){
 		}
 
 		var $ul = $this.closest('ul');
-		var $_new = $('<ul>' + $ul.html() + '</ul>');
+		var $_new = $ul.clone();
 		$ul.after($_new);
 		$_new.find('li').removeClass('input-error');
         $_new.find('input').val('');
