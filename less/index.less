@@ -77,6 +77,9 @@
 			font-size: @px24;
 			margin-right: @px10;
 			/*line-height: 1rem;*/
+			&:nth-child(1){
+				color: #333;
+			}
 		}
 	}
 }
@@ -189,9 +192,15 @@
 			}
 		}
 		a{
-			float: right;
-			font-size: @px28;
 			color: #333;
+			font-size: @px28;
+			&:nth-child(1){
+				float: left;
+			}
+			&:nth-child(2){
+				float: right;
+			}
+			
 		}
 	}
 	.brand-detail{

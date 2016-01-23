@@ -18,14 +18,22 @@
 			li{ 
 				position: relative;
 				margin-bottom: @px20;
+				p{
+					.clearfix();
+					span{
+						float: left;
+					}
+					width: (510/64)*1rem;
+				}
 				input{
+					float: right;
 					background-color: transparent;
 					height: @px30;
 					border: 1px solid @input-border;
 					border-radius: 0;
 					font-size: @px30;
 					padding: @px20 @px60 @px20 @px20;
-					width: (510/64)*1rem;
+					width: (300/64)*1rem;
 					&:focus{
 						border-color: @input-focus;
 					}
@@ -111,7 +119,7 @@
 				color: #f06f28;
 			}
 			&.fw-remark{
-				padding-bottom: @px60;
+				padding-bottom: @px70;
 			}
 		}
 		.fw-btn-fee{
