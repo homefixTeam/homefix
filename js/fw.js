@@ -9,6 +9,7 @@ $(function(){
 	$(".fw-cal-par").on("blur", "li input", function(){
 
 		$(this).closest('li').removeClass('input-error');
+		$(this).closest('p').removeClass('focus');
 
 		var dataMax = $(this).attr("data-max");
 		var dataName = $(this).attr("data-name");
@@ -35,6 +36,11 @@ $(function(){
 			$(this).closest("li").find('.input-tip').html(_errorMsg);
 		}
 		
+	});
+
+	//focus
+	$(".fw-cal-par").on("focus", "li input", function(){
+		$(this).closest('p').addClass('focus');
 	});
 
 	

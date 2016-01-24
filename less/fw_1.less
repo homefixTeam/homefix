@@ -20,27 +20,44 @@
 				margin-bottom: @px20;
 				p{
 					.clearfix();
-					border: 1px solid ;
+					position: relative;
+					border: 1px solid @input-border;
+					padding: @px20 @px60 @px20 @px20;
 					span{
 						float: left;
+						height: @px30;
+						line-height: @px30;
+						color: #999;
 					}
 					width: (510/64)*1rem;
+					&.focus{
+						border-color: @input-focus;
+					}
 				}
 				input{
 					float: right;
 					background-color: transparent;
 					height: @px30;
-					border: 1px solid @input-border;
+					/*border: 1px solid @input-border;*/
+					border: none;
 					border-radius: 0;
 					font-size: @px30;
-					padding: @px20 @px60 @px20 @px20;
-					width: (300/64)*1rem;
-					&:focus{
-						border-color: @input-focus;
+					width: (350/64)*1rem;
+					&.width200{
+						width: (200/64)*1rem;
 					}
+					&[type='date']{
+						width: (510/64)*1rem;
+					}
+					/* &:focus{
+						border-color: @input-focus;
+					} */
 				}
 				&.input-error{
-					input{
+					/* input{
+						border-color: @input-tip;
+					} */
+					>p{
 						border-color: @input-tip;
 					}
 					span.input-tip{
